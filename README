@@ -1,0 +1,14 @@
+Logback Appender to write into MongoDB.
+
+
+<configuration>
+  <appender name="MONGODB" class="org.dcache.mal.MongoDBAppender">
+    <DbHost>localhost</DbHost>
+    <DbPort>27017</DbPort>
+    <DbName>logging</DbName>
+  </appender>
+
+  <root level="INFO">
+    <appender-ref ref="MONGODB"/>
+  </root>
+</configuration>
