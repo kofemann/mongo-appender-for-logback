@@ -2,7 +2,7 @@ Logback Appender to write into MongoDB.
 
 
 <configuration>
-  <appender name="MONGODB" class="org.dcache.mal.MongoDBAppender">
+  <appender name="MONGODB" class="org.kofemann.MongoDBAppender">
     <DbHost>localhost</DbHost>
     <DbPort>27017</DbPort>
     <DbName>logging</DbName>
