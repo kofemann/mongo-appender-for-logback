@@ -74,8 +74,8 @@ public class MongoDBAppender extends AppenderBase<LoggingEvent> {
     protected void append(LoggingEvent e) {
 
         BasicDBObjectBuilder objectBuilder = BasicDBObjectBuilder.start().
-                add("timestamp", new Date(e.getTimeStamp())).
-                add("message", e.getFormattedMessage()).
+                add("ts", new Date(e.getTimeStamp())).
+                add("msg", e.getFormattedMessage()).
                 add("level", e.getLevel().toString()).
                 add("logger", e.getLoggerName()).
                 add("thread", e.getThreadName());
